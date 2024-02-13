@@ -1,0 +1,30 @@
+{% from "form_macros.html" import render_field, render_form %}
+
+{% extends 'base.html' %}
+
+{% block title %}Add new event{% endblock %}
+
+{% block content %}
+    <h4>Enter the details for the paralympics</h4>
+    <form method="post" novalidate>
+        {{ form.csrf_token }}
+        <div class="col-md-6">
+            <!-- Uses macro to render the fields in the form -->
+            {{ render_field(form.country) }}
+            {{ render_field(form.year) }}
+            {{ render_field(form.type) }}
+            {{ render_field(form.host) }}
+            {{ render_field(form.start) }}
+            {{ render_field(form.end) }}
+            {{ render_field(form.sports) }}
+            {{ render_field(form.countries) }}
+            {{ render_field(form.events) }}
+            {{ render_field(form.participants) }}
+            {{ render_field(form.participants_m) }}
+            {{ render_field(form.participants_f) }}
+            {{ render_field(form.disabilities_included) }}
+            {{ render_field(form.highlights) }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Parent Jinja template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <title>Paralympics - {% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+<header>
+    {% include 'navbar.html' %}
+</header>
+
+<!-- Flask flash messages will be displayed above the content block -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<div id="content" class="container-fluid">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
