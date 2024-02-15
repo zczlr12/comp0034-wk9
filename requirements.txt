@@ -8,3 +8,4 @@ jwt
 dash
 dash-bootstrap-components
 pandas
+requests
