@@ -15,7 +15,8 @@
                 </div>
                 {# column has text with a hyperlink to the page #}
                 <div class="col-10"><a
-                        href="{{ url_for('get_event', event_id=event.id) }}">{{ event.host }} {{ event.year }}</a>
+                        href="{{ url_for('get_event', event_id=event.id) }}"
+                        id="{{ event.id }}">{{ event.host }} {{ event.year }}</a>
                 </div>
             </div>
         {% endfor %}

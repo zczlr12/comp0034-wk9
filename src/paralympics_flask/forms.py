@@ -4,7 +4,7 @@ from wtforms.fields.choices import SelectField, SelectMultipleField
 from wtforms.fields.datetime import DateField
 from wtforms.fields.numeric import IntegerField
 from wtforms.fields.simple import TextAreaField, StringField
-from wtforms.validators import DataRequired, Length
+from wtforms.validators import DataRequired
 from wtforms_sqlalchemy.fields import QuerySelectField
 
 from paralympics_flask import db

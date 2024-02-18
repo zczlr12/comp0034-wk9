@@ -1,8 +1,5 @@
-import json
-
-import plotly
-import plotly.express as px
 import pandas as pd
+import plotly.express as px
 
 from paralympics_flask.models import Event
 

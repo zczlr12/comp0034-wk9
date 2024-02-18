@@ -59,4 +59,3 @@ def make_prediction(flower_values):
     variety = np.vectorize(varieties.__getitem__)(prediction[0])
 
     return variety
-

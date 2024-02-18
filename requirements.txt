@@ -4,8 +4,18 @@ Flask-SQLAlchemy
 Flask-Marshmallow
 Marshmallow-SQLAlchemy
 jwt
+flask-wtf
+wtforms-sqlalchemy
 # For Dash apps
 dash
 dash-bootstrap-components
 pandas
 requests
+# For testing
+pytest
+selenium
+# pytest-flask
+pytest-cov
+# Dash testing may need to be esacaped: dash\[testing]
+# see https://dash.plotly.com/testing
+dash[testing]

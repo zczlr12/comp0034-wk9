@@ -1,12 +1,11 @@
 import sqlite3
 from pathlib import Path
 
-import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-from dash import html
 import dash
 import dash_bootstrap_components as dbc
+import pandas as pd
+import plotly.express as px
+from dash import html
 
 event_data = Path(__file__).parent.parent.parent.joinpath("data", "paralympic_events.csv")
 paralympic_db = Path(__file__).parent.joinpath("paralympics_dash.sqlite")

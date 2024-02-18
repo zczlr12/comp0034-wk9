@@ -1,7 +1,7 @@
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
-from src.paralympics_dash.figures import line_chart, bar_gender, scatter_geo, event_data, create_card
+from paralympics_dash.figures import line_chart, bar_gender, scatter_geo
 
 # Figures
 map = scatter_geo()
@@ -32,7 +32,7 @@ checklist = dbc.Checklist(
 
 row_one = html.Div(
     dbc.Row([
-        dbc.Col([html.H1("Paralympics Dashboard"), html.P(
+        dbc.Col([html.H1("Paralympics Dashboard", id='heading-one'), html.P(
             "Use the charts to help you answer the questions.")
                  ], width=12),
     ]),

@@ -137,7 +137,6 @@ def update_region(noc_code):
             If the update is not saved, return 500
             If all OK then return 200
     """
-    app.logger.error(f"Started the patch")
     # Find the region in the database
     try:
         existing_region = db.session.execute(
@@ -156,7 +155,7 @@ def update_region(noc_code):
         region_update = region_schema.load(region_json, instance=existing_region, partial=True)
     except ValidationError as e:
         app.logger.error(f"A Marshmallow schema validation error occurred: {str(e)}")
-        msg = f'Failed Marshmallow schema validation'
+        msg = 'Failed Marshmallow schema validation'
         return make_response(msg, 500)
     # Commit the changes to the database
     try:
@@ -167,7 +166,7 @@ def update_region(noc_code):
         return response
     except exc.SQLAlchemyError as e:
         app.logger.error(f"A SQLAlchemy database error occurred: {str(e)}")
-        msg = f'An Internal Server Error occurred.'
+        msg = 'An Internal Server Error occurred.'
         return make_response(msg, 500)
 
 

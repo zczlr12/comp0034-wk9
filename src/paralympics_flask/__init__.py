@@ -19,7 +19,7 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY='create-your-own-key',
         SQLALCHEMY_DATABASE_URI="sqlite:///" + os.path.join(app.instance_path, 'paralympics_flask.sqlite'),
-        SQLALCHEMY_ECHO=True
+        # SQLALCHEMY_ECHO=True
     )
     if test_config:
         app.config.from_mapping(test_config)
