@@ -31,7 +31,7 @@ from paralympics_flask import create_app
 @pytest.fixture(scope='session')
 def app():
     """Fixture to create the Flask app and configure for testing"""
-    test_cfg = {"TESTING": True,}
+    test_cfg = {"TESTING": True, }
     app = create_app(test_config=test_cfg)
     yield app
 
@@ -45,3 +45,7 @@ def live_server(app):
     process.terminate()
 ```
 
+## Other options
+
+I have not tried this but there is a [pretty printed video tutorial](https://www.youtube.com/watch?v=T-y3_T1HgTI) covering the use of Playwright instead
+of [Selenium Webrowser](https://playwright.dev/python/)
